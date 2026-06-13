@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile Card</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #b0e4eb, #fce4ec);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #profileCard {
+      width: 320px;
+      background: rgb(248, 245, 245);
+      border-radius: 16px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+    }
+
+    #profileCard:hover {
+      transform: translateY(-5px);
+    }
+
+    .active-status {
+      background: #e8f5e9;
+      border: 2px solid #4caf50;
+    }
+
+    #profileImage {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ddd;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      margin: 10px 0 5px;
+    }
+
+    #profileRole {
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    #profileBio {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 20px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      margin: 8px 0;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: 0.2s ease;
+    }
+
+    button:hover {
+      opacity: 0.9;
+      transform: scale(1.02);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div id="profileCard">
+
+    <img id="profileImage" src="https://placehold.co/100x100" />
+
+    <h2 id="profileName">John Doe</h2>
+    <p id="profileRole">Software Developer</p>
+    <p id="profileBio">
+      Passionate about coding, building projects, and learning new technologies.
+    </p>
+
+    <button id="updateNameBtn">Update Name</button>
+    <button id="updateRoleBtn">Update Role</button>
+    <button id="toggleStatusBtn">Toggle Status</button>
+    <button id="changeImageBtn">Change Image</button>
+
+  </div>
+
+  <script>
+    const profileCard = document.getElementById("profileCard");
+    const profileName = document.getElementById("profileName");
+    const profileRole = document.getElementById("profileRole");
+    const profileImage = document.getElementById("profileImage");
+
+    document.getElementById("updateNameBtn").addEventListener("click", () => {
+      const name = prompt("Enter new name:");
+      if (name) profileName.textContent = name;
+    });
+
+    document.getElementById("updateRoleBtn").addEventListener("click", () => {
+      const role = prompt("Enter new role:");
+      if (role) profileRole.textContent = role;
+    });
+
+    document.getElementById("toggleStatusBtn").addEventListener("click", () => {
+      profileCard.classList.toggle("active-status");
+    });
+
+    document.getElementById("changeImageBtn").addEventListener("click", () => {
+      const img = prompt("Enter image URL:");
+      if (img) profileImage.src = img;
+    });
+  </script>
+
+</body>
+</html>
