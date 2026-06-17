@@ -27,3 +27,4 @@ This repository contains my JavaScript exercise submissions for the YouthCode pr
 **Part 3 — Advanced JavaScript (Week 5)**
 - week5-javascript-ex-01 — DOM Manipulation Part 1
 - week5-javascript-ex-02 — DOM Manipulation Part 2
+- week5-javascript-ex-02 — DOM Manipulation Part 3
