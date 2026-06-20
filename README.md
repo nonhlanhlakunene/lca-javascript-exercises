@@ -1,7 +1,7 @@
 # LCA JavaScript Exercises
 
 **Trainee:** Nonhlanhla Kunene
-**Programme:** YouthCode Off-Site — Cohort 18, 2026
+**Programme:** YouthCode On-Site — Cohort 18, 2026
 **Course:** Module 1 — Frontend Web Development
 **Topic:** JavaScript Exercises
 
